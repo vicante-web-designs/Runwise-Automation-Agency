@@ -4,5 +4,11 @@ export interface ButtonProps{
 }
 
 export interface BadgeProps{
-    label: string
+    label: string;
+}
+
+export interface ServiceCardProps{
+    icon: string;
+    title: string;
+    content: string;
 }
