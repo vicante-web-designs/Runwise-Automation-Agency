@@ -7,7 +7,7 @@ export interface BadgeProps{
     label: string;
 }
 
-export interface ServiceCardProps{
+export interface CardProps{
     icon: string;
     title: string;
     content: string;
