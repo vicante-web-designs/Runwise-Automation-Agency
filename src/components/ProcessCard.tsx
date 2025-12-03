@@ -1,4 +1,4 @@
-import { ProcessCardProps } from '../../types/Types';
+import type { ProcessCardProps } from '../../types/Types';
 
 function ProcessCard({ title, steps}: ProcessCardProps){
     return (
