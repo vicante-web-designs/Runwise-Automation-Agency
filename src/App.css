@@ -41,5 +41,11 @@
 }
 
 @layer components{
+    .sub-heading{
+        @apply font-bodyFont text-[25px] md:text-[28px] leading-8 md:leading-[38px] tracking-normal
+    }
 
+    .sub-text{
+        @apply font-bodyFont text-[20px] md:text-[22.5px] leading-[26px] md:leading-[30px] tracking-normal
+    }
 }
