@@ -12,7 +12,7 @@
 
     /* Custom font themes */
     --font-headerFont: 'Oswald', sans-serif;
-    --font-bodyFont: 'Inter', sans-serif
+    --font-bodyFont: 'Inter', sans-serif;
 }
 
 @layer base{
