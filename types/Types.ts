@@ -12,3 +12,8 @@ export interface ServiceCardProps{
     title: string;
     content: string;
 }
+
+export interface ProcessCardProps{
+    title: string;
+    steps: string[];
+}
