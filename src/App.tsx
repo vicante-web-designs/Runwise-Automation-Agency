@@ -5,10 +5,10 @@ import Hero from './sections/Hero'
 function App() {
 
   return (
-    <>
+    <main className='flex flex-col gap-20 md:gap-40'>
      <Nav />
      <Hero />
-    </>
+    </main>
   )
 }
 
