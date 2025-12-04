@@ -43,10 +43,14 @@ function Process(){
         }   
     ]
     return(
-        <section>
+        <section className='flex flex-col gap-20'>
             <Badge 
                 label='How It Works'
             />
+
+            <h3 className='text-center'>
+                How It Works
+            </h3>
 
             <section className='flex flex-col gap-20'>
                 {
