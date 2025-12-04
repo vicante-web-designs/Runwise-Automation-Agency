@@ -9,6 +9,7 @@ import WhyUs from './sections/WhyUs';
 import CTA from './sections/CTA';
 import FAQ from './sections/FAQ';
 import Contact from './sections/Contact';
+import Footer from './sections/Footer';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
      <CTA />
      <FAQ />
      <Contact />
+     <Footer />
   </main>
   )
 }
