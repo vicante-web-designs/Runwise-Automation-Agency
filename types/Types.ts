@@ -18,6 +18,7 @@ export interface CardProps{
 }
 
 export interface ProcessCardProps{
+    id: number;
     title: string;
     steps: string[];
 }
