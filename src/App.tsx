@@ -7,6 +7,7 @@ import Process from './sections/Process';
 import Tools from './sections/Tools';
 import WhyUs from './sections/WhyUs';
 import CTA from './sections/CTA';
+import FAQ from './sections/FAQ';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
      <Tools />
      <WhyUs />
      <CTA />
+     <FAQ />
   </main>
   )
 }
