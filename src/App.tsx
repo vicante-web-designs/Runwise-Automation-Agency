@@ -6,6 +6,7 @@ import SpecializedServices from './sections/SpecializedServices';
 import Process from './sections/Process';
 import Tools from './sections/Tools';
 import WhyUs from './sections/WhyUs';
+import CTA from './sections/CTA';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
      <Process />
      <Tools />
      <WhyUs />
+     <CTA />
   </main>
   )
 }
