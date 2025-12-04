@@ -1,4 +1,5 @@
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import type { IconType } from 'react-icons/lib';
 
 export interface ButtonProps{
     label: string;
@@ -11,7 +12,7 @@ export interface BadgeProps{
 }
 
 export interface CardProps{
-    icon: IconDefinition;
+    icon: IconDefinition | IconType;
     title: string;
     content: string;
 }
