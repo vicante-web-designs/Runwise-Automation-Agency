@@ -6,8 +6,8 @@
     --color-primaryColor: #055BFF;
     --color-backgroundColor: #00040D;
     --color-border-color: #334F85;
-    --color-textStrong: #CCD3E0;
-    --color-textWeak: #F6F6F6;
+    --color-textWeak: #A3A8B2;
+    --color-textStrong: #F6F6F6;
     --color-sectionBg: rgba(8,17,34,60);
 
     /* Custom font themes */
@@ -46,7 +46,7 @@
     }
 
     .sub-text{
-        @apply font-bodyFont text-[20px] md:text-[22.5px] leading-[26px] md:leading-[30px] tracking-normal
+        @apply font-bodyFont text-textWeak text-[20px] md:text-[22.5px] leading-[26px] md:leading-[30px] tracking-normal
     }
 
     .primaryBtn{
