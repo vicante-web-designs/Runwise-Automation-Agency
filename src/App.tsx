@@ -2,6 +2,7 @@ import './App.css'
 import Nav from './sections/Nav'
 import Hero from './sections/Hero'
 import Services from './sections/Services'
+import SpecializedServices from './sections/SpecializedServices'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
      <Nav />
      <Hero />
      <Services />
+     <SpecializedServices />
     </main>
   )
 }
