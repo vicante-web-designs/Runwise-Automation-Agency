@@ -25,9 +25,9 @@ function Services(){
             <Badge 
                 label='What We Offer'
             />
-            <h2 className='text-center'>
+            <h3 className='text-center'>
                 Our Core Services
-            </h2>
+            </h3>
 
             <section className='flex flex-col md:flex-row gap-6'>
                 {
