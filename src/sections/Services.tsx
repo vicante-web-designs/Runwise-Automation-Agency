@@ -21,23 +21,25 @@ function Services(){
     ]
     
     return(
-        <section>
+        <section className='flex flex-col py-10 gap-12'>
             <Badge 
                 label='What We Offer'
             />
-            <h2>
+            <h2 className='text-center'>
                 Our Core Services
             </h2>
 
-            {
-                services.map(service => (
+            <section className='flex flex-col md:flex-row gap-6'>
+                {
+                    services.map(service => (
                     <Card 
                         icon={service.icon}
                         title={service.title}
                         content={service.content}
                     />
                 ))
-            }
+                }
+            </section>
         </section>
     )
 }
