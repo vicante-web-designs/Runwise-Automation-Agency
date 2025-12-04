@@ -2,9 +2,9 @@ import Button from '../components/Button';
 
 function Hero(){
     return(
-        <section>
-            <h1>
-                Powered by Automation
+        <section className='flex flex-col items-center py-10 gap-6 md:gap-12'>
+            <h1 className='text-center'>
+                Powered by<br />Automation
             </h1>
         
             <Button 
