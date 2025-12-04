@@ -3,6 +3,7 @@ import Nav from './sections/Nav'
 import Hero from './sections/Hero'
 import Services from './sections/Services'
 import SpecializedServices from './sections/SpecializedServices'
+import Process from './sections/Process'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
      <Hero />
      <Services />
      <SpecializedServices />
+     <Process />
     </main>
   )
 }
