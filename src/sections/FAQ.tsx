@@ -53,7 +53,7 @@ function FAQ(){
     ];
 
     return (
-        <section className='pageSection'>
+        <section className='pageSection flex flex-col gap-10'>
             <Badge 
                 label='Fequently Asked Questions'
             />
