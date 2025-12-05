@@ -22,7 +22,7 @@ function WhyUs(){
         },
     ]
     return(
-        <section>
+        <section className='pageSection'>
             <Badge 
                 label='Why Us?'
             />

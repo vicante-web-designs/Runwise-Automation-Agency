@@ -21,7 +21,7 @@ function Services(){
     ]
     
     return(
-        <section className='flex flex-col py-10 gap-12'>
+        <section className='flex flex-col py-10 gap-12 pageSection'>
             <Badge 
                 label='What We Offer'
             />

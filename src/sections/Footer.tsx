@@ -6,10 +6,10 @@ import { SiLinkedin, SiInstagram } from "react-icons/si"
 
 function Footer (){
     return (
-        <footer>
+        <footer className='pageSection flex flex-col items-center'>
             <Logo />
 
-            <article>
+            <article className='pageSection flex flex-col items-center *:text-center'>
                 <p>
                     © 2025 Runwise. All rights reserved.
                 </p>

@@ -50,6 +50,10 @@
 }
 
 @layer components{
+    .pageSection{
+        @apply mx-6 md:mx-[60px] lg:mx-[120px]
+    }
+    
     .sub-heading{
         @apply font-bodyFont text-[25px] md:text-[28px] leading-8 md:leading-[38px] tracking-normal
     }

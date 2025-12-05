@@ -69,7 +69,7 @@ function Tools(){
         }
     ]
     return(
-        <section className='flex flex-col gap-[72px] my-10'>
+        <section className='flex flex-col gap-[72px] my-10 pageSection'>
             <Badge 
                 label='Our Stack'
             />

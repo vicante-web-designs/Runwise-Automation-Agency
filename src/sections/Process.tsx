@@ -43,7 +43,7 @@ function Process(){
         }   
     ]
     return(
-        <section className='flex flex-col gap-20'>
+        <section className='flex flex-col gap-20 pageSection'>
             <Badge 
                 label='How It Works'
             />

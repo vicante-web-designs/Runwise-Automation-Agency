@@ -14,12 +14,14 @@ import Footer from './sections/Footer';
 function App() {
 
   return (
-  <main className='flex flex-col gap-20 md:gap-40 mx-6 md:mx-[60px] lg:mx-[120px]'>
+  <main className='flex flex-col gap-20 md:gap-40'>
      <Nav />
      <Hero />
      <Services />
      <SpecializedServices />
-     <Process />
+     <section className='bg-sectionBg w-screen'>
+      <Process />
+     </section>
      <Tools />
      <WhyUs />
      <CTA />

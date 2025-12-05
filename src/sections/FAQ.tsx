@@ -53,7 +53,7 @@ function FAQ(){
     ];
 
     return (
-        <section>
+        <section className='pageSection'>
             <Badge 
                 label='Fequently Asked Questions'
             />

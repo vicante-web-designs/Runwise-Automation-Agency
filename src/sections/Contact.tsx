@@ -3,7 +3,7 @@ import Button from '../components/Button';
 
 function Contact(){
     return(
-        <section className='flex flex-col'>
+        <section className='flex flex-col pageSection'>
             <Badge 
                 label='Contact Us'
             />
