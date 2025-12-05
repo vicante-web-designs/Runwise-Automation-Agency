@@ -79,39 +79,49 @@ function Tools(){
             </h3>
 
             <section className="space-y-8">
-                <div className='flex justify-between gap-4  overflow-hidden'>
+                <Marquee
+                speed={30}
+                pauseOnHover
+                gradient={true}
+                gradientColor='rgba(8,17,34,60)'  gradientWidth={50}>
                     {
                         stack1.map(tool => (
-                            <div className='flex flex-col'>
+                            <div className='flex flex-col items-center mx-6'>
                                 <img
                                     src={tool.imgSrc}
                                     alt={`${tool.name} Logo`}
                                     className='w-24 h-24'
                                 />
-                                <p>
+                                <p className="mt-2">
                                     {tool.name}
                                 </p>
                             </div>
                         ))
                     }
-                </div>
+                </Marquee>
 
-                <div className='flex justify-between gap-4 overflow-hidden'>
+                <Marquee
+                speed={30}
+                pauseOnHover
+                gradient={true}
+                gradientColor='rgba(8,17,34,60)'  gradientWidth={50}
+                direction='right'
+                >
                     {
                         stack2.map(tool => (
-                            <div className='flex flex-col'>
+                            <div className='flex flex-col items-center mx-6'>
                                 <img
                                     src={tool.imgSrc}
                                     alt={`${tool.name} Logo`}
                                     className='w-24 h-24'
                                 />
-                                <p>
+                                <p className="mt-2">
                                     {tool.name}
                                 </p>
                             </div>
                         ))
                     }
-                </div>
+                </Marquee>
             </section>
 
             <h4 className='text-center'>
