@@ -39,7 +39,9 @@ function App() {
 
      <Contact />
      
-     <Footer />
+     <section className='bg-[#0c121e] w-screen'>
+      <Footer />
+     </section>
   </main>
   )
 }
