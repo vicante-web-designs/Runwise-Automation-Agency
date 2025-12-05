@@ -16,17 +16,29 @@ function App() {
   return (
   <main className='flex flex-col gap-20 md:gap-40'>
      <Nav />
+
      <Hero />
+
      <Services />
+
      <SpecializedServices />
+
      <section className='bg-sectionBg w-screen'>
       <Process />
      </section>
+
      <Tools />
+
      <WhyUs />
-     <CTA />
+
+     <section className='bg-sectionBg w-screen'>
+      <CTA />
+     </section>
+
      <FAQ />
+
      <Contact />
+     
      <Footer />
   </main>
   )
