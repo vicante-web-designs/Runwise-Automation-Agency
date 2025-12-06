@@ -43,7 +43,9 @@ function App() {
      <section className='bg-[#0c121e] w-screen'>
       <Footer />
      </section>
-     <BackgroundCircles />
+     <BackgroundCircles
+      position='top-20 right-10'
+     />
   </main>
   )
 }
