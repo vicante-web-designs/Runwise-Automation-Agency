@@ -8,17 +8,17 @@ function WhyUs(){
         {
             icon: faChartLine,
             title: 'Results Over Tools',
-            content: "We don't just provide software—we deliver measurable outcomes. Every feature is designed to save time, boost productivity, and increase revenue."
+            content: "We don't just provide software, we deliver measurable outcomes. Every feature is designed to save time, boost productivity, and increase revenue."
         },
         {
             icon: faPuzzlePiece,
             title: 'Tailored for Your Business',
-            content: 'Runwise adapts to your workflow, capturing leads, automating tasks, and streamlining operations—without extra setup or complexity.'
+            content: 'Runwise adapts to your workflow, capturing leads, automating tasks, and streamlining operations, without extra setup or complexity.'
         },
         {
             icon: faHandshake,
             title: 'Trusted Automation Partner',
-            content: 'We prioritize reliability, efficiency, and clarity—earning your trust, simplifying processes, and delivering results without unnecessary complexity.'
+            content: 'We prioritize reliability, efficiency, and clarity, earning your trust, simplifying processes, and delivering results without unnecessary complexity.'
         },
     ]
     return(
