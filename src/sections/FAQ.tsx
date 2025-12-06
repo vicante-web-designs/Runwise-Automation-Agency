@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import Badge from '../components/Badge';
 import type { Question } from '../../types/Types';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -52,6 +53,9 @@ function FAQ(){
         },
     ];
 
+    const detailDom = useRef<HTMLDetailsElement>(null)
+    console.dir(detailDom.current)
+
     return (
         <section className='pageSection flex flex-col gap-10'>
             <Badge 
@@ -60,9 +64,13 @@ function FAQ(){
             
             <article className='flex flex-col gap-4'>
                 {
-                    questions.map(question => (
+                    questions.map((question,key) => (
                         <div className='flex items-center border-b-2 bg-sectionBg rounded-t-md px-2 justify-between'>
-                            <details className="p-4 flex flex-col gap-4">
+                            <details
+                            key={key}
+                            ref={detailDom}
+                            className="p-4 flex flex-col gap-4"
+                            >
                                 <summary className="cursor-pointer font-semibold text-primary list-none">
                                     {`${question.id}. ${question.question}`}
                                 </summary>
@@ -87,3 +95,8 @@ function FAQ(){
 }
 
 export default FAQ;
+
+//get the reference for the section
+//get the reference for the plus sign
+//change the plus icon to an x when clicked
+//show the summary when clicked

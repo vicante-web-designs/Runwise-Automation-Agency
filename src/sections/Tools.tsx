@@ -85,8 +85,11 @@ function Tools(){
                 gradient={true}
                 gradientColor='rgba(8,17,34,60)'  gradientWidth={50}>
                     {
-                        stack1.map(tool => (
-                            <div className='flex flex-col items-center mx-6'>
+                        stack1.map((tool,key) => (
+                            <div
+                            key={key}
+                            className='flex flex-col items-center mx-6'
+                            >
                                 <img
                                     src={tool.imgSrc}
                                     alt={`${tool.name} Logo`}

@@ -39,8 +39,9 @@ function SpecializedServices(){
 
             <section className='flex flex-col md:flex-row md:flex-wrap gap-6'>
                 {
-                    specializedServices.map(service => (
+                    specializedServices.map((service,key) => (
                     <Card 
+                        key={key}
                         icon={service.icon}
                         title={service.title}
                         content={service.content}

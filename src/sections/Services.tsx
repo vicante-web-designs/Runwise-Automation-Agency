@@ -31,8 +31,9 @@ function Services(){
 
             <section className='flex flex-col md:flex-row gap-6'>
                 {
-                    services.map(service => (
+                    services.map((service,key) => (
                     <Card 
+                        key={key}
                         icon={service.icon}
                         title={service.title}
                         content={service.content}
