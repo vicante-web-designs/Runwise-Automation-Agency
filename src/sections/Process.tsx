@@ -44,6 +44,7 @@ function Process(){
     ]
     return(
         <section className='flex flex-col gap-10 md:gap-20 py-10 pageSection'>
+            
             <Badge 
                 label='How It Works'
             />
@@ -52,12 +53,18 @@ function Process(){
                 How It Works
             </h3>
 
-            <section className='flex flex-col gap-20'>
+            <section className='flex flex-col gap-20 relative'>
+                <div
+                    className='bg-textStrong w-2 h-full absolute left-1/2 hidden lg:block'
+                ></div>
+                {/* Center Line, only visible on screens above 1024px*/}
+
                 {
                     processCards.map((processCard, key) => (
                         <div
                         key={key}
                         className={`w-fit ${key % 2 !== 0 ? `ml-auto` : 'mr-auto'}`}
+                        //align divs by odd/even index
                         >
                             <ProcessCard 
                                 id= {processCard.id}
