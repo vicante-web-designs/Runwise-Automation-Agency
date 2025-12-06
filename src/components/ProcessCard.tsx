@@ -15,10 +15,7 @@ function ProcessCard({ id, title, steps}: ProcessCardProps){
             <article className='flex flex-col gap-4'>
                 {
                     steps.map((step,key) => (
-                        <div
-                        key={key}
-                        className='flex gap-4'
-                        >
+                        <div className='flex gap-4' key={key}>
                             <div className='w-4 h-4 bg-primaryColor rounded-full'></div>
                             
                             <p className='text-textWeak max-w-[250px]'>
