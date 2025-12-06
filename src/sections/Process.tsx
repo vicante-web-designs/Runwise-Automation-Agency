@@ -55,7 +55,10 @@ function Process(){
             <section className='flex flex-col gap-20'>
                 {
                     processCards.map((processCard, key) => (
-                        <div key={key}>
+                        <div
+                        key={key}
+                        className={`w-fit ${key % 2 !== 0 ? `ml-auto` : 'mr-auto'}`}
+                        >
                             <ProcessCard 
                                 id= {processCard.id}
                                 title= {processCard.title}

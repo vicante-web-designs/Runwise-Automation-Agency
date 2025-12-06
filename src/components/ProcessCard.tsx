@@ -1,6 +1,6 @@
 import type { ProcessCardProps } from '../../types/Types';
 
-function ProcessCard({ id, title, steps}: ProcessCardProps){
+function ProcessCard({ id, title, steps }: ProcessCardProps){
     return (
         <article className='flex flex-col p-6 gap-6 bg-[rgba(102,123,163,0.2)] rounded-xl w-fit mx-auto items-center relative'>
             
