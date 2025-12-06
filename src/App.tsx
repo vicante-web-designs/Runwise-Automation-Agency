@@ -1,5 +1,4 @@
 import './App.css';
-import BackgroundCircles from './components/BackgroundCircles';
 import Nav from './sections/Nav';
 import Hero from './sections/Hero';
 import Services from './sections/Services';
@@ -11,42 +10,54 @@ import CTA from './sections/CTA';
 import FAQ from './sections/FAQ';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
+import BackgroundCircles from './components/BackgroundCircles';
 
 function App() {
 
   return (
-  <main className='flex flex-col gap-20 md:gap-40'>
-     <Nav />
+  <div className="container">
+    <BackgroundCircles
+        position='top-20 right-10'
+    />
+    <BackgroundCircles
+        position='bottom-20 left-10'
+    />
+    <main className='flex flex-col gap-20 md:gap-40 container'>
+      <BackgroundCircles
+        position='top-20 right-10'
+    />
+    <BackgroundCircles
+        position='bottom-20 left-10'
+    />
+      <Nav />
 
-     <Hero />
+      <Hero />
 
-     <Services />
+      <Services />
 
-     <SpecializedServices />
+      <SpecializedServices />
 
-     <section className='bg-sectionBg w-screen'>
-      <Process />
-     </section>
+      <section className='bg-sectionBg w-screen'>
+        <Process />
+      </section>
 
-     <Tools />
+      <Tools />
 
-     <WhyUs />
+      <WhyUs />
 
-     <section className='bg-sectionBg w-screen'>
-      <CTA />
-     </section>
+      <section className='bg-sectionBg w-screen'>
+        <CTA />
+      </section>
 
-     <FAQ />
+      <FAQ />
 
-     <Contact />
-     
-     <section className='bg-[#0c121e] w-screen'>
-      <Footer />
-     </section>
-     <BackgroundCircles
-      position='top-20 right-10'
-     />
-  </main>
+      <Contact />
+      
+      <section className='bg-[#0c121e] w-screen'>
+        <Footer />
+      </section>
+    </main>
+  </div>
   )
 }
 

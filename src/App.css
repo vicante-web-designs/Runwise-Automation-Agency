@@ -8,7 +8,7 @@
     --color-borderColor: #334F85;
     --color-textWeak: #A3A8B2;
     --color-textStrong: #F6F6F6;
-    --color-sectionBg: rgba(8,17,34,60);
+    --color-sectionBg: rgba(8,17,34,0.6);
 
     /* Custom font themes */
     --font-headerFont: 'Oswald', sans-serif;
@@ -50,8 +50,11 @@
 }
 
 @layer components{
+    .container{
+        @apply relative h-screen overflow-y-scroll border w-screen
+    }
     .pageSection{
-        @apply mx-6 md:mx-[60px] lg:mx-[120px]
+        @apply mx-6 md:mx-[60px] lg:mx-[120px] relative
     }
     
     .sub-heading{
