@@ -1,4 +1,5 @@
 import './App.css';
+import BackgroundCircles from './components/BackgroundCircles';
 import Nav from './sections/Nav';
 import Hero from './sections/Hero';
 import Services from './sections/Services';
@@ -42,6 +43,7 @@ function App() {
      <section className='bg-[#0c121e] w-screen'>
       <Footer />
      </section>
+     <BackgroundCircles />
   </main>
   )
 }
