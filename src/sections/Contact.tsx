@@ -3,13 +3,13 @@ import Button from '../components/Button';
 
 function Contact(){
     return(
-        <section className='flex flex-col gap-10 pageSection'>
+        <section id='contact' className='flex flex-col gap-10 pageSection' aria-labelledby="contact-heading">
             <Badge 
                 label='Contact Us'
             />
 
             <article className='text-center mx-auto flex flex-col gap-4'>
-                <h3 className='leading-10'>
+                <h3 id="contact-heading" className='leading-10'>
                     Let's Make Your Business<br /> Run Smarter
                 </h3>
 
@@ -18,67 +18,88 @@ function Contact(){
                 </p>
             </article>
 
-            <form action="" method='POST'  className='flex flex-col gap-6 w-full max-w-2xl mx-auto'>
+            <form 
+                action="" 
+                method='POST' 
+                className='flex flex-col gap-6 w-full max-w-2xl mx-auto'
+                noValidate
+                aria-label="Contact form"
+            >
                 <div className='flex flex-col *:flex *:flex-col gap-4'>
-                    <label>
+                    <label htmlFor="name">
                         <p className='font-bold flex gap-1'>
                             Name
-                            <span className='text-primaryColor'>
+                            <span className='text-primaryColor' aria-label="required">
                                 *
                             </span>
                         </p>
                         <input
-                        type="text"
-                        placeholder="e.g. JohnDoe Logistics"
-                        required
+                            id="name"
+                            name="name"
+                            type="text"
+                            placeholder="e.g. JohnDoe Logistics"
+                            required
+                            aria-required="true"
+                            autoComplete="name"
                         />
                     </label>
 
-                    <label>
+                    <label htmlFor="email">
                         <p className='font-bold flex gap-1'>
                             Email
-                            <span className='text-primaryColor'>
+                            <span className='text-primaryColor' aria-label="required">
                                 *
                             </span>
                         </p>
                         <input
-                        type="text"
-                        placeholder="e.g. johndoe@yourbusiness.com"
-                        required
+                            id="email"
+                            name="email"
+                            type="email"
+                            placeholder="e.g. johndoe@yourbusiness.com"
+                            required
+                            aria-required="true"
+                            autoComplete="email"
                         />
                     </label>
 
-                    <label>
+                    <label htmlFor="business-role">
                         <p className='font-bold flex gap-1'>
                             Business / Role
-                            <span className='text-primaryColor'>
+                            <span className='text-primaryColor' aria-label="required">
                                 *
                             </span>
                         </p>
                         
                         <input
-                        type="text"
-                        placeholder="e.g. Operations Lead at JohnDoe Logistics Ltd"
-                        required
+                            id="business-role"
+                            name="business-role"
+                            type="text"
+                            placeholder="e.g. Operations Lead at JohnDoe Logistics Ltd"
+                            required
+                            aria-required="true"
+                            autoComplete="organization-title"
                         />
                     </label>
 
-                    <label>
+                    <label htmlFor="problem">
                         <p className='font-bold flex gap-1'>
                             Please describe your problem
-                            <span className='text-primaryColor'>
+                            <span className='text-primaryColor' aria-label="required">
                                 *
                             </span>
                         </p>
                         
                         <input
-                        type="text"
-                        placeholder="e.g. Too many repetitive approvals slowing down my team"
-                        required
+                            id="problem"
+                            name="problem"
+                            type="text"
+                            placeholder="e.g. Too many repetitive tasks slowing down my team"
+                            required
+                            aria-required="true"
                         />
                     </label>
 
-                    <label>
+                    <label htmlFor="message">
                         <p className='font-bold'>
                             Message (Optional)
                         </p>
@@ -89,8 +110,11 @@ function Contact(){
                             cols={50}
                             className='px-4'
                             placeholder="Share extra context, goals, or automation ideas..."
-                        >
-                        </textarea>
+                            aria-describedby="message-description"
+                        />
+                        <span id="message-description" className="sr-only">
+                            Optional field for additional details about your automation needs
+                        </span>
                     </label>
                 </div>
 

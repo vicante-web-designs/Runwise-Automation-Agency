@@ -8,7 +8,7 @@ function Hero(){
             </h1>
         
             <Button 
-                destination='#'
+                destination='#contact'
                 type='button'
                 label='Get started'
             />

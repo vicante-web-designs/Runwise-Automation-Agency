@@ -10,6 +10,7 @@ function CTA(){
             <Button 
                 label='Get started'
                 type='button'
+                destination='#contact'
             />
         </section>
     )

@@ -44,6 +44,7 @@ function Footer (){
             <Button 
                 type='button'
                 label='Get in touch'
+                destination='#contact'
             />
 
             <div className='flex *:text-2xl gap-4'>
