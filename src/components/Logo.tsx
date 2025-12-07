@@ -11,9 +11,9 @@ function Logo(){
                 className='w-15'
                 aria-hidden="true"
             />
-            <span className='tracking-tighter text-2xl font-bold'>
+            <h3 className='tracking-tighter font-bold hover:text-primaryColor transition-colors duration-200 ease-in-out'>
                 RUNWISE
-            </span>
+            </h3>
         </a>
     )
 }
