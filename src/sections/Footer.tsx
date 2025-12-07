@@ -47,8 +47,12 @@ function Footer (){
             />
 
             <div className='flex *:text-2xl gap-4'>
-                <SiLinkedin />
-                <SiInstagram />
+                <a href="https://www.linkedin.com/company/runwise-ai-agency/" title='Link to Linkedin Page' target='_blank' rel='noopener noreferrer'>
+                    <SiLinkedin />
+                </a>
+                <a href="https://www.instagram.com/runwiseai/" title='Link to Instagram Page' target='_blank' rel='noopener noreferrer'>
+                     <SiInstagram />
+                </a>
             </div>
 
         </footer>
