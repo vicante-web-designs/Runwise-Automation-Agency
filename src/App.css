@@ -13,6 +13,8 @@
     /* Custom font themes */
     --font-headerFont: 'Oswald', sans-serif;
     --font-bodyFont: 'Inter', sans-serif;
+
+    --breakpoint-slg: 800px;
 }
 
 @layer base{
