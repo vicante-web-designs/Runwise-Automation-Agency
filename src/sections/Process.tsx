@@ -15,7 +15,7 @@ function Process(){
         },
         {
             id: 2,
-            title:'Understand Your Needs',
+            title:'Discover Your Needs',
             steps:[
                 'We talk through your challenges',
                 'Decide together what tools and automations will help',
@@ -55,7 +55,7 @@ function Process(){
 
             <section className='flex flex-col gap-20 relative'>
                 <div
-                    className='bg-textStrong w-2 h-full absolute left-1/2 hidden lg:block'
+                    className='bg-textStrong w-2 h-full absolute left-1/2 hidden slg:block'
                 ></div>
                 {/* Center Line, only visible on screens above 1024px*/}
 
