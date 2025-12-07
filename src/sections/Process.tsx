@@ -55,7 +55,7 @@ function Process(){
 
             <section className='flex flex-col gap-20 relative'>
                 <div
-                    className='bg-textStrong w-2 h-full absolute left-1/2 hidden slg:block'
+                    className='bg-textStrong w-2 h-full absolute left-1/2 hidden slg:block rounded-full'
                 ></div>
                 {/* Center Line, only visible on screens above 1024px*/}
 
