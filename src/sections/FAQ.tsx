@@ -89,6 +89,7 @@ function FAQ() {
           >
             <button
               className='flex items-start justify-between cursor-pointer w-full text-left'
+              type='button'
               onClick={() => toggleFaq(question.id)}
               onKeyDown={(e) => handleKeyDown(e, question.id)}
               aria-expanded={openId === question.id}

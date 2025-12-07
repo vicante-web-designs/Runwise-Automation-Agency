@@ -10,7 +10,7 @@ function ProcessCard({ id, title, steps }: ProcessCardProps) {
     offset: ['start center', 'end center'],
   });
 
-  const isActive: MotionValue<number> = useTransform(scrollYProgress, (value) => value > 0 ? 1 : 0);
+  const isActive = useTransform(scrollYProgress, (value) => value > 0 ? 1 : 0) as MotionValue<number>;
   
   const backgroundColor = useTransform(
     isActive,
@@ -73,14 +73,14 @@ function ProcessCard({ id, title, steps }: ProcessCardProps) {
         {title}
       </motion.h3>
 
-      <div 
+      <ul 
         id={stepsId}
         className='flex flex-col gap-4'
         role="list"
         aria-label={`Steps for ${title}`}
       >
         {steps.map((step, index) => (
-          <motion.div
+          <motion.li
             key={index}
             className='flex gap-4'
             initial={{ opacity: 0, x: -20 }}
@@ -101,9 +101,9 @@ function ProcessCard({ id, title, steps }: ProcessCardProps) {
             >
               {step}
             </motion.p>
-          </motion.div>
+          </motion.li>
         ))}
-      </div>
+      </ul>
     </motion.article>
   );
 }
