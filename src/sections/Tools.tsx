@@ -83,7 +83,9 @@ function Tools(){
                 speed={30}
                 pauseOnHover
                 gradient={true}
-                gradientColor='rgba(8,17,34,60)'  gradientWidth={50}>
+                gradientColor='rgba(8,17,34,60)'  gradientWidth={50}
+                autoFill
+                >
                     {
                         stack1.map((tool,key) => (
                             <div
@@ -100,8 +102,7 @@ function Tools(){
                                 </p>
                             </div>
                         ))
-                    }
-                    
+                    }                    
                 </Marquee>
 
                 <Marquee
@@ -110,6 +111,7 @@ function Tools(){
                 gradient={true}
                 gradientColor='rgba(8,17,34,60)'  gradientWidth={50}
                 direction='right'
+                autoFill
                 >
                     {
                         stack2.map(tool => (
