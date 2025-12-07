@@ -109,6 +109,7 @@ function Tools(){
                 pauseOnHover
                 gradient={true}
                 gradientColor='rgba(8,17,34,60)'  gradientWidth={50}
+                direction='right'
                 >
                     {
                         stack2.map(tool => (
