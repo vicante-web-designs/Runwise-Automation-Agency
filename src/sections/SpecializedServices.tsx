@@ -45,13 +45,13 @@ function SpecializedServices(){
             </h2>
 
             <div 
-                className='flex flex-col md:flex-row md:flex-wrap gap-6 justify-center'
+                className='flex flex-col md:flex-row md:flex-wrap gap-6 justify-center mx-auto items-stretch'
                 role="list"
                 aria-label="Our specializations"
             >
                 {
                     specializedServices.map((service, index) => (
-                        <div key={index} role="listitem">
+                        <div key={index} role="listitem" className='flex flex-1'>
                             <Card 
                                 icon={service.icon}
                                 title={service.title}

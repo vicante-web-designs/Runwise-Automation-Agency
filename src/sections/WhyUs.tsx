@@ -40,7 +40,7 @@ function WhyUs(){
             </h2>
 
             <div 
-                className='flex flex-col md:flex-row gap-6 w-full max-w-7xl mx-auto'
+                className='flex flex-col md:flex-row gap-6 w-full max-w-7xl mx-auto justify-center'
                 role="list"
                 aria-label="Reasons to choose Runwise"
             >

@@ -36,13 +36,13 @@ function Services(){
             </h2>
 
             <div 
-                className='flex flex-col md:flex-row gap-6'
+                className='flex flex-col md:flex-row gap-6 mx-auto items-stretch'
                 role="list"
                 aria-label="Available services"
             >
                 {
                     services.map((service, index) => (
-                        <div key={index} role="listitem">
+                        <div key={index} role="listitem" className='flex-1 flex'>
                             <Card 
                                 icon={service.icon}
                                 title={service.title}
