@@ -1,10 +1,18 @@
 import type { ProcessCardProps } from '../../types/Types';
 import Badge from '../components/Badge';
 import ProcessCard from '../components/ProcessCard';
+import { motion, useScroll } from 'framer-motion';
+import { useRef } from 'react';
 
-function Process(){
-    const processCards: ProcessCardProps[] = [
-        {
+function Process() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start start', 'end end'],
+  });
+
+  const processCards: ProcessCardProps[] = [
+    {
             id: 1,
             title:'Get started',
             steps:[
@@ -40,44 +48,35 @@ function Process(){
                 'Ongoing help to keep things running smoothly',
                 'Updates whenever needed'
             ]
-        }   
-    ]
-    return(
-        <section className='flex flex-col gap-10 md:gap-20 py-10 pageSection'>
-            
-            <Badge 
-                label='How It Works'
+        }
+  ];
+
+  return (
+    <section ref={ref} className='flex flex-col gap-10 md:gap-20 py-10 pageSection'>
+      <Badge label='How It Works' />
+      <h3 className='text-center'>How It Works</h3>
+      
+      <section className='flex flex-col gap-20 relative'>
+        <motion.div
+          className='bg-borderColor w-2 h-full absolute left-1/2 hidden slg:block rounded-full origin-top'
+          style={{ scaleY: scrollYProgress }}
+        />
+        
+        {processCards.map((processCard, key) => (
+          <div
+            key={key}
+            className={`w-fit ${key % 2 !== 0 ? 'ml-auto' : 'mr-auto'}`}
+          >
+            <ProcessCard 
+              id={processCard.id}
+              title={processCard.title}
+              steps={processCard.steps}
             />
-
-            <h3 className='text-center'>
-                How It Works
-            </h3>
-
-            <section className='flex flex-col gap-20 relative'>
-                <div
-                    className='bg-textStrong w-2 h-full absolute left-1/2 hidden slg:block rounded-full'
-                ></div>
-                {/* Center Line, only visible on screens above 1024px*/}
-
-                {
-                    processCards.map((processCard, key) => (
-                        <div
-                        key={key}
-                        className={`w-fit ${key % 2 !== 0 ? `ml-auto` : 'mr-auto'}`}
-                        //align divs by odd/even index
-                        >
-                            <ProcessCard 
-                                id= {processCard.id}
-                                title= {processCard.title}
-                                steps= {processCard.steps}
-                            />
-                        </div>
-                    ))
-                }
-            </section>
-            
-        </section>
-    )
+          </div>
+        ))}
+      </section>
+    </section>
+  );
 }
 
 export default Process;
