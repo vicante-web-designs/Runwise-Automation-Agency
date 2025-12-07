@@ -13,7 +13,7 @@ function Card({ icon, title, content, ariaLabel }: CardProps){
 
     return (
         <article 
-            className='flex flex-col p-4 sm:p-6 gap-4 sm:gap-6 bg-[rgba(102,123,163,0.2)] rounded-xl w-full sm:w-fit mx-auto'
+            className='flex flex-col p-4 sm:p-6 gap-4 sm:gap-6 bg-[rgba(102,123,163,0.2)] rounded-xl w-full sm:w-[330px] mx-auto'
             aria-labelledby={`card-title-${title.replace(/\s+/g, '-').toLowerCase()}`}
             aria-describedby={contentId}
             aria-label={ariaLabel}
@@ -40,14 +40,17 @@ function Card({ icon, title, content, ariaLabel }: CardProps){
                     }
                 </div>
 
-                <h3 id={`card-title-${title.replace(/\s+/g, '-').toLowerCase()}`}>
+                <h3 
+                    id={`card-title-${title.replace(/\s+/g, '-').toLowerCase()}`}
+                    className='min-h-14'
+                >
                     {title}
                 </h3>
             </div>
 
             <p 
                 id={contentId}
-                className="sub-text max-w-full sm:max-w-[330px]"
+                className="sub-text"
             >
                 {content}
             </p>
