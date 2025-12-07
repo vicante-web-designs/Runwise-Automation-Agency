@@ -19,7 +19,7 @@ function Contact(){
             </article>
 
             <form 
-                action="https://formsubmit.co/runwiseagency@gmail.com" 
+                action="https://formsubmit.co/c486028bc0feb22d0e0cd170051501ad" 
                 method='POST' 
                 className='flex flex-col gap-6 w-full max-w-2xl mx-auto'
                 noValidate
