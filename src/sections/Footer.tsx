@@ -31,12 +31,15 @@ function Footer(){
                         aria-hidden="true"
                     />
                     <a 
-                        href='mailto:info@runwiseai.co'
-                        className='hover:underline'
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=info@runwiseai.co"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
                         aria-label="Email us at info@runwiseai.co"
-                    >
-                        info@runwiseai.co
-                    </a>
+                        >
+                            runwiseagency@gmail.com
+                        </a>
+
                 </div>
 
                 <div className='flex gap-2 items-center'>
