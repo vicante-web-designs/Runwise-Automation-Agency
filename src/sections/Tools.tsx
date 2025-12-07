@@ -68,34 +68,46 @@ function Tools(){
             imgSrc: '/Tools_Logo/deepseek-color.svg'
         }
     ]
+
     return(
-        <section className='flex flex-col gap-[72px] my-10 pageSection'>
+        <section 
+            id="tools"
+            className='flex flex-col gap-[72px] my-10 pageSection'
+            aria-labelledby="tools-heading"
+        >
             <Badge 
                 label='Our Stack'
             />
 
-            <h3 className='text-center'>
+            <h2 id="tools-heading" className='text-center'>
                 Tools We Use
-            </h3>
+            </h2>
 
-            <section className="space-y-0">
+            <div 
+                className="space-y-0"
+                role="region"
+                aria-label="Technology stack showcase"
+            >
                 <Marquee
-                speed={30}
-                pauseOnHover
-                gradient={true}
-                gradientColor='rgba(8,17,34,60)'  gradientWidth={50}
-                autoFill
+                    speed={30}
+                    pauseOnHover
+                    gradient={true}
+                    gradientColor='rgba(8,17,34,60)'
+                    gradientWidth={50}
+                    autoFill
+                    aria-label="First row of tools we integrate with"
                 >
                     {
-                        stack1.map((tool,key) => (
+                        stack1.map((tool, index) => (
                             <div
-                            key={key}
-                            className='flex flex-col items-center mx-6'
+                                key={index}
+                                className='flex flex-col items-center mx-6'
                             >
                                 <img
                                     src={tool.imgSrc}
-                                    alt={`${tool.name} Logo`}
+                                    alt={`${tool.name} logo`}
                                     className='w-24 h-24'
+                                    loading="lazy"
                                 />
                                 <p className="mt-2">
                                     {tool.name}
@@ -106,20 +118,26 @@ function Tools(){
                 </Marquee>
 
                 <Marquee
-                speed={30}
-                pauseOnHover
-                gradient={true}
-                gradientColor='rgba(8,17,34,60)'  gradientWidth={50}
-                direction='right'
-                autoFill
+                    speed={30}
+                    pauseOnHover
+                    gradient={true}
+                    gradientColor='rgba(8,17,34,60)'
+                    gradientWidth={50}
+                    direction='right'
+                    autoFill
+                    aria-label="Second row of tools we integrate with"
                 >
                     {
-                        stack2.map(tool => (
-                            <div className='flex flex-col items-center mx-6 mt-8'>
+                        stack2.map((tool, index) => (
+                            <div 
+                                key={index}
+                                className='flex flex-col items-center mx-6 mt-8'
+                            >
                                 <img
                                     src={tool.imgSrc}
-                                    alt={`${tool.name} Logo`}
+                                    alt={`${tool.name} logo`}
                                     className='w-24 h-24'
+                                    loading="lazy"
                                 />
                                 <p className="mt-2">
                                     {tool.name}
@@ -128,12 +146,12 @@ function Tools(){
                         ))
                     }
                 </Marquee>
-            </section>
+            </div>
 
-            <h4 className='text-center'>
-                If you use it, <br />
+            <p className='text-center text-xl font-semibold'>
+                If you use it,<br />
                 We can connect it.
-            </h4>
+            </p>
         </section>
     )
 }

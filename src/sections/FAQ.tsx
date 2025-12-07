@@ -3,7 +3,6 @@ import { faPlus, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Badge from '../components/Badge';
 
-
 function FAQ() {
   const questions = [
     {
@@ -55,42 +54,80 @@ function FAQ() {
 
   const [openId, setOpenId] = useState<number | null>(null);
 
-  const toggleFaq = (id: number |null) => {
+  const toggleFaq = (id: number) => {
     setOpenId(openId === id ? null : id);
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent, id: number) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      toggleFaq(id);
+    }
+  };
+
   return (
-    <section className='flex flex-col gap-10 p-8'>
+    <section 
+      id="faq"
+      className='flex flex-col gap-10 p-8'
+      aria-labelledby="faq-heading"
+    >
       <Badge label='Frequently Asked Questions' />
       
-      <article className='flex flex-col gap-4 w-full max-w-3xl mx-auto'>
+      <div 
+        className='flex flex-col gap-4 w-full max-w-3xl mx-auto'
+        role="region"
+        aria-label="Frequently asked questions list"
+      >
+        <h2 id="faq-heading" className="sr-only">
+          Frequently Asked Questions
+        </h2>
+
         {questions.map((question) => (
           <div
             key={question.id}
-            className='flex items-start border-b-2 bg-sectionBg rounded-t-md hover:border hover:border-primaryColor justify-between cursor-pointer transition-all ease-in-out duration-300'
-            onClick={() => toggleFaq(question.id)}
+            className='flex flex-col border-b-2 bg-sectionBg rounded-t-md hover:border hover:border-primaryColor transition-all ease-in-out duration-300'
           >
-            <div className="p-4 flex flex-col gap-4 flex-1">
-              <div className="font-semibold">
-                {`${question.id}. ${question.question}`}
+            <button
+              className='flex items-start justify-between cursor-pointer w-full text-left'
+              onClick={() => toggleFaq(question.id)}
+              onKeyDown={(e) => handleKeyDown(e, question.id)}
+              aria-expanded={openId === question.id}
+              aria-controls={`faq-answer-${question.id}`}
+              id={`faq-question-${question.id}`}
+            >
+              <div className="p-4 flex-1">
+                <span className="font-semibold">
+                  {`${question.id}. ${question.question}`}
+                </span>
               </div>
-              {openId === question.id && (
+
+              <span 
+                className="p-4"
+                aria-hidden="true"
+              >
+                <FontAwesomeIcon 
+                  icon={openId === question.id ? faXmark : faPlus}
+                  className='font-bold text-blue-600'
+                  size='lg'
+                />
+              </span>
+            </button>
+
+            {openId === question.id && (
+              <div
+                id={`faq-answer-${question.id}`}
+                role="region"
+                aria-labelledby={`faq-question-${question.id}`}
+                className="px-4 pb-4"
+              >
                 <p className='text-textWeak'>
                   {question.answer}
                 </p>
-              )}
-            </div>
-
-            <span className="p-4">
-              <FontAwesomeIcon 
-                icon={openId === question.id ? faXmark : faPlus}
-                className='font-bold text-blue-600'
-                size='lg'
-              />
-            </span>
+              </div>
+            )}
           </div>
         ))}
-      </article>
+      </div>
     </section>
   );
 }

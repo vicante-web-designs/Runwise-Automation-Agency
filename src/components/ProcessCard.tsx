@@ -7,10 +7,9 @@ function ProcessCard({ id, title, steps }: ProcessCardProps) {
   
   const { scrollYProgress } = useScroll({
     target: cardRef,
-    offset: ['start center', 'end center'], // Triggers when card start reaches viewport center
+    offset: ['start center', 'end center'],
   });
 
-  // Binary transformation - either 0 or 1, no in-between
   const isActive: MotionValue<number> = useTransform(scrollYProgress, (value) => value > 0 ? 1 : 0);
   
   const backgroundColor = useTransform(
@@ -43,40 +42,57 @@ function ProcessCard({ id, title, steps }: ProcessCardProps) {
     ['rgba(209,213,219,1)', 'rgba(30,58,138,1)']
   );
 
+  // Generate unique IDs for accessibility
+  const titleId = `process-card-title-${id}`;
+  const stepsId = `process-card-steps-${id}`;
+
   return (
     <motion.article
       ref={cardRef}
       style={{ backgroundColor, borderColor }}
       transition={{ duration: 0.3 }}
       className='flex flex-col p-6 gap-6 rounded-xl w-fit mx-auto items-center relative border-2'
+      aria-labelledby={titleId}
+      aria-describedby={stepsId}
     >
-      <motion.span
+      <motion.div
         style={{ backgroundColor: badgeColor }}
         transition={{ duration: 0.3 }}
         className='w-14 h-14 rounded-full border border-textStrong flex items-center justify-center text-2xl font-bold absolute -top-7 text-white'
+        aria-label={`Step ${id}`}
+        role="img"
       >
         {id}
-      </motion.span>
+      </motion.div>
 
-      <motion.h4 
+      <motion.h3
+        id={titleId}
         style={{ color: titleColor }}
         transition={{ duration: 0.3 }}
       >
         {title}
-      </motion.h4>
+      </motion.h3>
 
-      <article className='flex flex-col gap-4'>
-        {steps.map((step, key) => (
+      <div 
+        id={stepsId}
+        className='flex flex-col gap-4'
+        role="list"
+        aria-label={`Steps for ${title}`}
+      >
+        {steps.map((step, index) => (
           <motion.div
-            key={key}
+            key={index}
             className='flex gap-4'
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: key * 0.1, duration: 0.5 }}
+            transition={{ delay: index * 0.1, duration: 0.5 }}
             viewport={{ once: true }}
+            role="listitem"
           >
             <div 
               className='w-4 h-4 rounded-full mt-1 shrink-0 bg-blue-500'
+              aria-hidden="true"
+              role="presentation"
             />
             <motion.p 
               style={{ color: textColor }}
@@ -87,7 +103,7 @@ function ProcessCard({ id, title, steps }: ProcessCardProps) {
             </motion.p>
           </motion.div>
         ))}
-      </article>
+      </div>
     </motion.article>
   );
 }

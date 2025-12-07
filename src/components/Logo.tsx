@@ -1,15 +1,20 @@
 function Logo(){
     return(
-        <div className='flex items-center mx-auto w-fit gap-2 py-4'>
+        <a 
+            href="/" 
+            className='flex items-center mx-auto w-fit gap-2 py-4'
+            aria-label="Runwise home"
+        >
             <img
-                src="\Logo\Logo.png"
-                alt="Runwise logo"
+                src="/Logo/Logo.png"
+                alt=""
                 className='w-15'
-                />
-            <h3 className='tracking-tighter'>
+                aria-hidden="true"
+            />
+            <span className='tracking-tighter text-2xl font-bold'>
                 RUNWISE
-            </h3>
-        </div>
+            </span>
+        </a>
     )
 }
 

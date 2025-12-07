@@ -7,8 +7,9 @@ export interface BackgroundCirclesProp{
 
 export interface ButtonProps{
     label: string;
-    type: 'button' | 'submit' | 'reset';
+    type?: 'button' | 'submit' | 'reset';
     destination?: string;
+    ariaLabel?: string;
 }
 
 export interface BadgeProps{
@@ -19,6 +20,7 @@ export interface CardProps{
     icon: IconDefinition | IconType;
     title: string;
     content: string;
+    ariaLabel?: string;
 }
 
 export interface ProcessCardProps{

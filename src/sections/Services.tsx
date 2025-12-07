@@ -8,39 +8,51 @@ function Services(){
     // List of services
     const services: CardProps[] = [
         {
-            icon:faCog,
-            title:'Process Automation',
-            content:'Manual tasks slow teams and cause errors. Runwise automates workflows and approvals, freeing your team to focus on growth.'
+            icon: faCog,
+            title: 'Process Automation',
+            content: 'Manual tasks slow teams and cause errors. Runwise automates workflows and approvals, freeing your team to focus on growth.',
+            ariaLabel: 'Process Automation service'
         },
 
         {
-            icon:AiOutlineRobot,
-            title:'AI Agents',
-            content:'Repetitive tasks waste time. Runwise AI handles routine responses and reminders, letting your team scale efficiently.'
+            icon: AiOutlineRobot,
+            title: 'AI Agents',
+            content: 'Repetitive tasks waste time. Runwise AI handles routine responses and reminders, letting your team scale efficiently.',
+            ariaLabel: 'AI Agents service'
         },
     ]
     
     return(
-        <section className='flex flex-col py-10 gap-12 pageSection'>
+        <section 
+            id="services"
+            className='flex flex-col py-10 gap-12 pageSection'
+            aria-labelledby="services-heading"
+        >
             <Badge 
                 label='What We Offer'
             />
-            <h3 className='text-center'>
+            <h2 id="services-heading" className='text-center'>
                 Our Core Services
-            </h3>
+            </h2>
 
-            <section className='flex flex-col md:flex-row gap-6'>
+            <div 
+                className='flex flex-col md:flex-row gap-6'
+                role="list"
+                aria-label="Available services"
+            >
                 {
-                    services.map((service,key) => (
-                    <Card 
-                        key={key}
-                        icon={service.icon}
-                        title={service.title}
-                        content={service.content}
-                    />
-                ))
+                    services.map((service, index) => (
+                        <div key={index} role="listitem">
+                            <Card 
+                                icon={service.icon}
+                                title={service.title}
+                                content={service.content}
+                                aria-label={service.ariaLabel}
+                            />
+                        </div>
+                    ))
                 }
-            </section>
+            </div>
         </section>
     )
 }
