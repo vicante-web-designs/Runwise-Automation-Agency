@@ -101,7 +101,7 @@ function Contact(){
 
                     <label htmlFor="message">
                         <p className='font-bold'>
-                            Message (Optional)
+                            Message <span className="text-textWeak text-[14px]">(optional)</span>
                         </p>
                         <textarea
                             id="message"
