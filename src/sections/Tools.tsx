@@ -52,7 +52,7 @@ function Tools(){
             imgSrc: '/Tools_Logo/ClickUp_idfty-HNVU_0.svg'
         },
         {
-            name: 'PostgresSQL',
+            name: 'PostgreSQL',
             imgSrc: '/Tools_Logo/postgresql 1.svg'
         },
         {
