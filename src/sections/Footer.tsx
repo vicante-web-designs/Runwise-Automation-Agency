@@ -34,7 +34,7 @@ function Footer(){
                         href="https://mail.google.com/mail/?view=cm&fs=1&to=info@runwiseai.co"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:underline"
+                        className="hover:underline hover:decoration-primaryColor"
                         aria-label="Email us at info@runwiseai.co"
                         >
                             runwiseagency@gmail.com
@@ -69,6 +69,7 @@ function Footer(){
                             target='_blank'
                             rel='noopener noreferrer'
                             aria-label="Visit our LinkedIn page (opens in new tab)"
+                            className='hover:text-primaryColor hover:text-3xl hover:translate-y-24 transition-all duration-200 ease-in'
                         >
                             <SiLinkedin aria-hidden="true" />
                         </a>
@@ -79,6 +80,7 @@ function Footer(){
                             target='_blank'
                             rel='noopener noreferrer'
                             aria-label="Visit our Instagram page (opens in new tab)"
+                            className='hover:text-primaryColor hover:text-3xl hover:translate-y-24 transition-all duration-200 ease-in'
                         >
                             <SiInstagram aria-hidden="true" />
                         </a>
