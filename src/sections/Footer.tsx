@@ -76,7 +76,7 @@ function Footer(){
                     </li>
                     <li>
                         <a 
-                            href="https://www.instagram.com/runwiseai/"
+                            href="https://www.instagram.com/runwiseaa/"
                             target='_blank'
                             rel='noopener noreferrer'
                             aria-label="Visit our Instagram page (opens in new tab)"
