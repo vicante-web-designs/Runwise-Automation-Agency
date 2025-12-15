@@ -13,7 +13,7 @@ function Card({ icon, title, content, ariaLabel }: CardProps){
 
     return (
         <article 
-            className='flex flex-col p-4 sm:p-6 gap-4 sm:gap-6 bg-[rgba(102,123,163,0.2)] rounded-xl w-full sm:w-[330px] mx-auto h-full'
+            className='flex flex-col p-4 sm:p-6 gap-4 sm:gap-6 bg-[rgba(102,123,163,0.2)] rounded-xl w-full sm:w-[330px] mx-auto h-full hover:border hover:border-primaryColor'
             aria-labelledby={`card-title-${title.replace(/\s+/g, '-').toLowerCase()}`}
             aria-describedby={contentId}
             aria-label={ariaLabel}

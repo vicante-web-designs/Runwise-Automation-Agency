@@ -69,7 +69,7 @@ function Process() {
         aria-label="Process steps"
       >
         <motion.div
-          className='bg-borderColor w-2 h-full absolute left-1/2 hidden slg:block rounded-full origin-top'
+          className='bg-borderColor w-2 h-full absolute left-1/2 rounded-full origin-top'
           style={{ scaleY: scrollYProgress }}
           aria-hidden="true"
           role="presentation"

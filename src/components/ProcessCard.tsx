@@ -51,7 +51,7 @@ function ProcessCard({ id, title, steps }: ProcessCardProps) {
       ref={cardRef}
       style={{ backgroundColor, borderColor }}
       transition={{ duration: 0.3 }}
-      className='flex flex-col p-6 gap-6 rounded-xl w-fit mx-auto items-center relative border-2'
+      className='flex flex-col p-12 gap-6 rounded-xl w-fit mx-auto items-center relative border-2'
       aria-labelledby={titleId}
       aria-describedby={stepsId}
     >
