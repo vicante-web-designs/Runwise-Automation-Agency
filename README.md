@@ -74,9 +74,9 @@ The goal was to design and build a clear, conversion-focused landing page that c
 
 ## 🔗 Links
 
-- [Live Demo:](https://runwiseaa.com/)
+- Live Demo: [https://runwiseaa.com/](https://runwiseaa.com/)
 
-- [Source Code:](https://github.com/runwiseagency-aa/runwise-aa)
+- Source Code: [https://github.com/runwiseagency-aa/runwise-aa](https://github.com/runwiseagency-aa/runwise-aa)
 
 ## 👤 Author
 
