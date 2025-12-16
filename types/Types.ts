@@ -10,6 +10,7 @@ export interface ButtonProps{
     type?: 'button' | 'submit' | 'reset';
     destination?: string;
     ariaLabel?: string;
+    onClick?: () => Promise<void>
 }
 
 export interface BadgeProps{
@@ -38,4 +39,12 @@ export interface Question{
     id: number;
     question: string;
     answer: string;
+}
+
+export interface ContactFormData{
+    name: string;
+    email: string;
+    role: string;
+    problem: string;
+    message?: string;
 }
