@@ -1,6 +1,6 @@
 import type { ButtonProps } from '../../types/Types'
 
-function Button({ label, type, destination, ariaLabel }: ButtonProps){
+function Button({ label, type, destination, ariaLabel, onClick }: ButtonProps){
     // If there's a destination, render as a link styled as a button
     if (destination) {
         return(
@@ -18,6 +18,7 @@ function Button({ label, type, destination, ariaLabel }: ButtonProps){
     // Otherwise render as a button
     return(
         <button 
+            onClick={onClick}
             type={type || 'button'}
             className='primaryBtn sub-text text-textStrong'
             aria-label={ariaLabel || label}
