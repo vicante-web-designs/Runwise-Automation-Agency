@@ -15,7 +15,7 @@ function Footer(){
 
             <div className='pageSection flex flex-col items-center *:text-center gap-4'>
                 <p>
-                    © 2025 Runwise. All rights reserved.
+                    {`© ${new Date().getFullYear()} Runwise. All rights reserved.`}
                 </p>
 
                 <p>
